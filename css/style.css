@@ -335,14 +335,14 @@
   display: block;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
-  color: rgba(86,124,119,0.8);
+  color: #383838;
   text-transform: none;
   letter-spacing: normal;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 .content h3 {
-  color: rgba(86,124,119,0.8);
+  color: #383838;
   text-decoration: underline;
   font-weight: bold;
   font-size: 0.9rem;
@@ -421,7 +421,7 @@
 .content th {
   padding: 8px;
   border-bottom: 1px dashed $color-code-border;
-  color: rgba(86,124,119,0.8);
+  color: #383838;
   font-weight: bold;
   font-size: 13px;
 }
@@ -452,7 +452,7 @@ body {
   color: #22272a;
   font-weight: 400;
   font-size: 14px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Arial, sans-serif;
   line-height: 1.725;
   text-rendering: geometricPrecision;
   -moz-osx-font-smoothing: grayscale;
@@ -1039,7 +1039,7 @@ article header .posttitle {
   margin-top: 0;
   margin-bottom: 0;
   text-transform: none;
-  font-size: 1.5em;
+  font-size: 1.8em;
   line-height: 1.25;
 }
 article header .meta {
@@ -1060,7 +1060,7 @@ article header .postdate {
 }
 article .content h2:before {
   position: absolute;
-  top: -4px;
+  top: 0;
   left: -1rem;
   color: #cc2a41;
   content: "#";
@@ -1154,7 +1154,7 @@ article .content .caption {
 }
 .posttitle {
   text-transform: none;
-  font-size: 1.5em;
+  font-size: 1.8em;
   line-height: 1.25;
 }
 .article-tag .tag-link {
@@ -1279,7 +1279,7 @@ article .content .caption {
   background-image: none;
 }
 .pagination a:hover:not(.active) {
-  color: rgba(86,124,119,0.8);
+  color: #383838;
 }
 .search-input {
   padding: 4px 7px;
@@ -1328,57 +1328,72 @@ article .content .caption {
   color: #22272a;
 }
 .highlight {
-  padding: 0.5em;
-  color: #333;
+  background: #1d1f21;
+  color: #c5c8c6;
+/* selection color */
+}
+.highlight::selection,
+.highlight span::selection {
+  background: #373b41;
+}
+.highlight::-moz-selection,
+.highlight span::-moz-selection {
+  background: #373b41;
+}
+.highlight .code .title,
+.highlight .code .name {
+  color: #f0c674;
 }
 .highlight .code .comment,
-.highlight .code .meta {
-  color: #969896;
+.highlight .code .meta,
+.highlight .code .meta .keyword {
+  color: #707880;
+}
+.highlight .code .number,
+.highlight .code .symbol,
+.highlight .code .literal,
+.highlight .code .deletion,
+.highlight .code .link {
+  color: #c66;
 }
 .highlight .code .string,
-.highlight .code .variable,
-.highlight .code .template-variable,
-.highlight .code .strong,
-.highlight .code .emphasis,
-.highlight .code .quote {
-  color: #df5000;
+.highlight .code .doctag,
+.highlight .code .addition,
+.highlight .code .regexp,
+.highlight .code .selector-attr,
+.highlight .code .selector-pseudo {
+  color: #b5bd68;
+}
+.highlight .code .attribute,
+.highlight .code .code,
+.highlight .code .selector-id {
+  color: #b294bb;
 }
 .highlight .code .keyword,
 .highlight .code .selector-tag,
-.highlight .code .type {
-  color: #a71d5d;
-}
-.highlight .code .literal,
-.highlight .code .symbol,
 .highlight .code .bullet,
-.highlight .code .attribute {
-  color: #0086b3;
-}
-.highlight .code .section,
-.highlight .code .name {
-  color: #63a35c;
-}
 .highlight .code .tag {
-  color: #333;
+  color: #81a2be;
 }
-.highlight .code .title,
-.highlight .code .attr,
-.highlight .code .selector-id,
-.highlight .code .selector-class,
-.highlight .code .selector-attr,
-.highlight .code .selector-pseudo {
-  color: #795da3;
+.highlight .code .subst,
+.highlight .code .variable,
+.highlight .code .template-tag,
+.highlight .code .template-variable {
+  color: #8abeb7;
 }
-.highlight .code .addition {
-  color: #55a532;
-  background-color: #eaffea;
+.highlight .code .type,
+.highlight .code .built_in,
+.highlight .code .builtin-name,
+.highlight .code .quote,
+.highlight .code .section,
+.highlight .code .selector-class {
+  color: #de935f;
 }
-.highlight .code .deletion {
-  color: #bd2c00;
-  background-color: #ffecec;
+.highlight .code .emphasis {
+  font-style: italic;
 }
-.highlight .code .link {
-  text-decoration: underline;
+.highlight .code .strong {
+  font-weight: bold;
 }
 pre {
   overflow-x: auto;
@@ -1387,7 +1402,7 @@ pre {
   border: 1px dotted #666;
   border-radius: 4px;
   font-size: 13px;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Arial, sans-serif;
   line-height: 22px;
   -webkit-border-radius: 4px;
 }
@@ -1407,8 +1422,7 @@ code {
   margin: 1rem 0;
   padding: 10px 15px;
   border-radius: 4px;
-  background: #f5f5f5;
-  font-family: "Menlo", "Meslo LG", monospace;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, Arial, sans-serif;
   -webkit-border-radius: 4px;
 }
 .highlight figcaption {
@@ -1439,6 +1453,7 @@ code {
 }
 .highlight pre {
   padding: 0;
+  margin: 0 0 10px;
   border: none;
   background: none;
 }
